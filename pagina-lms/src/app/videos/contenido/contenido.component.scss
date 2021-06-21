@@ -1,0 +1,27 @@
+
+.list {
+  color: black;
+}
+
+.button{
+ border: none;
+ text-align: start;
+}
+
+.disable{
+    color: blue;
+}
+
+.speed{
+  transition: height 0.2s;
+  transition-timing-function: ease;
+}
+
+.mark{
+  border: 3px solid #0d9df060;
+  border-radius: 5px;
+}
+
+.animation:active{
+  transform: rotate(180deg);
+}

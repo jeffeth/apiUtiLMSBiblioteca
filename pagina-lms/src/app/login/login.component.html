@@ -1,0 +1,75 @@
+<!-- Content Wrapper. Contains page content -->
+
+<div class="hold-transition login-page">
+<div class="row">
+  <div class="col-md-6">
+    <br>
+    <br>
+    <br>
+    <br>
+   <img src="../../assets/img/logoBiblioteca.png" height="100px" width="100px">
+   <br>
+   <p style="float:  0;">Unidad Bibliotecaria Paracentral</p>
+  </div>
+  <div class="col-md-6">
+<div class="login-box" style="position: 0;">
+  <div class="login-logo">
+
+    <a href="#"><b>UES</b>FMP</a>
+
+  </div>
+  <!-- /.login-logo -->
+  <div class="card">
+    <div class="card-body login-card-body">
+      <p class="login-box-msg">Inicio de sesion</p>
+
+      <form>
+        <div class="input-group mb-3">
+          <input type="email" class="form-control" placeholder="Ingrese su correo institucional"
+            [(ngModel)]="usuario.correo" name="username" id="username" autofocus>
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-envelope"></span>
+            </div>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <input type="password" class="form-control" placeholder="Ingrese su contraseña" [(ngModel)]="usuario.password"
+            name="password" id="password">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-lock"></span>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+
+          <!-- /.col -->
+          <div class="col-4">
+            <button (click)="login()" type="submit" class="btn btn-primary btn-block"><i class="fas fa-sign-in-alt"></i>
+              Iniciar</button>
+          </div>
+          <!-- /.col -->
+        </div>
+      </form>
+
+
+      <br>
+
+
+    </div>
+    <!-- /.login-card-body -->
+
+  </div>
+
+
+
+</div>
+
+<!-- /.login-box -->
+  </div>
+
+</div>
+
+
+

@@ -1,0 +1,83 @@
+<!-- Main Sidebar Container -->
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
+  <!-- Brand Logo -->
+  <a [routerLink]="['/noticias']" class="brand-link">
+    <img
+      src="../../assets/img/logoBiblioteca.png"
+      alt="AdminLTE Logo"
+      class="brand-image img-circle elevation-3"
+      style="opacity: 0.8"
+    />
+    <span class="brand-text font-weight-light" style="font-size: 15px">
+      <br />
+      <p style="font-size: 14px">
+        <br />
+        Unidad de Técnologia de información
+      </p>
+    </span>
+  </a>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <!-- Sidebar Menu -->
+    <!-- <nav *ngIf="usuarioService.estaAutenticado()" class="mt-2"> -->
+    <nav class="mt-2">
+      <ul
+        class="nav nav-pills nav-sidebar flex-column"
+        data-widget="treeview"
+        role="menu"
+        data-accordion="false"
+      >
+        <!-- Add icons to the links using the .nav-icon class
+                with font-awesome or any other icon font library -->
+
+        <!-- <li class="nav-item" *ngIf="usuarioService.obtenerRol()"> -->
+        <li class="nav-item">
+          <a
+            [routerLink]="['/noticias']"
+            routerLinkActive="active-link"
+            class="nav-link"
+          >
+            <i class="nav-icon fas fa-book"></i>
+            <p>Noticias</p>
+          </a>
+        </li>
+
+        <!-- <li class="nav-item" *ngIf="usuarioService.obtenerRol()"> -->
+        <li class="nav-item">
+          <a [routerLink]="['/foros']" class="nav-link">
+            <i class="nav-icon far fa-comments"></i>
+            <p>Foros</p>
+          </a>
+        </li>
+
+        <!-- <li class="nav-item" *ngIf="!usuarioService.obtenerRol()"> -->
+        <li class="nav-item">
+          <a
+            class="nav-link dropdown-toggle"
+            data-toggle="collapse"
+            href="#collapseExample"
+            role="button"
+            aria-expanded="false"
+            aria-controls="collapseExample">
+            <i class="nav-icon fab fa-youtube"></i>
+            <p>Videos</p>
+          </a>
+          <div
+            class="collapse card"
+            style="background-color: rgb(59, 59, 59); overflow: -moz-hidden-unscrollable; "
+            id="collapseExample">
+            <li class="nav-item" *ngFor="let op of indice">
+              <a (click)="base64(op.id)" routerLinkActive="active"  class="nav-link">
+                <!-- <i class="nav-icon fas fa-photo-video"></i> -->
+                <p style="cursor: pointer;">• {{op.tema_padre}}</p>
+              </a>
+            </li>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <!-- /.sidebar-menu -->
+  </div>
+  <!-- /.sidebar -->
+</aside>
